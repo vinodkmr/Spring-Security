@@ -1,0 +1,26 @@
+spring:
+  mvc:
+    static-path-pattern: /resources/**
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+
+
+  ##database Configuration INSTANCE
+#MSql DB Configuration
+
+  datasource:
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://192.168.105.217:1433;databaseName=VINOD_INSTANCE
+    username: accosa_user
+    password: accosa2k4
+
+
+  jpa:
+    show-sql: true
+    hibernate.ddl-auto: none   
+    properties.hibernate.dialect: org.hibernate.dialect.SQLServer2012Dialect
+    
+    
+    # Naming strategy
+    hibernate:naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
